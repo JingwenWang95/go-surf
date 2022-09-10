@@ -1,0 +1,48 @@
+dataset_type: "rgbd"
+datasets_dir: "/media/jingwen/Data/neural_rgbd_data"
+lr:
+    decoder: 0.001
+    features: 0.01
+    inv_s: 0.001
+    poses: 0.0005
+iterations: 10000
+voxel_sizes: [0.03, 0.06, 0.24, 0.96]
+truncation: 0.16
+sdf_feature_dim: [4, 4, 4, 4]
+rgb_feature_dim: [0, 6, 0, 0]
+optimise_poses: true
+decoder:
+    geometry:
+        W: 32
+        D: 2
+        skips: []
+        n_freq: 0
+        weight_norm: false
+        concat_qp: false
+    radiance:
+        W: 32
+        D: 2
+        skips: []
+        use_view_dirs: true # concatenate viewing direction
+        use_normals: false # concatenate surface normal
+        use_dot_prod: false # concatenate dot product between viewing dir and surface normal
+        n_freq: 0
+        weight_norm: false
+        concat_qp: false
+near: 0.1
+far: 4.
+far_threshold: 4.
+rgb_weight: 10.
+depth_weight: 1.
+fs_weight: 1.
+sdf_weight: 10.
+normal_regularisation_weight: 1.
+normal_supervision_weight: 0.
+eikonal_weight: 1.
+smoothness_std: 0.004
+n_samples: 96
+n_importance: 36
+use_view_dirs: true
+batch_size: 6144
+trainskip: 1
+reconstruct_upsample: 4

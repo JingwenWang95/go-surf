@@ -1,0 +1,4 @@
+dataset_type: "scannet"
+datasets_dir: "/media/jingwen/Data/scannet/scans"
+far: 5.
+trainskip: 4
