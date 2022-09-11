@@ -69,7 +69,7 @@ python setup.py install
 ## 2. Dataset
 
 ### Synthetic Dataset
-We use the synthetic dataset from [NeuralRGB-D](https://github.com/dazinovic/neural-rgbd-surface-reconstruction) which contains 10 synthetic sequences with GT meshes and camera poses. You can download it from [here](). You can find the original link in NeuralRGB-D's Github repo from [here](https://github.com/dazinovic/neural-rgbd-surface-reconstruction#dataset).
+We use the synthetic dataset from [NeuralRGB-D](https://github.com/dazinovic/neural-rgbd-surface-reconstruction) which contains 10 synthetic sequences with GT meshes and camera poses. You can download it from [here](https://www.dropbox.com/s/qehzn4divmtzgp2/neural_rgbd_data.zip?dl=0) (9.5 GB). You can also find the original link in NeuralRGB-D's Github repo from [here](https://github.com/dazinovic/neural-rgbd-surface-reconstruction#dataset).
 
 The data of each scene is organised as follows:
 ```
@@ -113,7 +113,7 @@ You can start training by running:
 ```
 python train.py --scene grey_white_room  --exp_name test
 ```
-Note that `scene` must correspond to the config files defined under `configs/`. For the list of scenes you can refer to (here)[]. After training, the log files and checkpoints will be saved under `logs/${scene}/${exp_name}`
+Note that `scene` must correspond to the config files defined under `configs/`. For the list of scenes you can refer to [here](https://github.com/JingwenWang95/go-surf/blob/master/dataio/get_scene_bounds.py#L4). After training, the log files and checkpoints will be saved under `logs/${scene}/${exp_name}`
 
 To extract the mesh of trained scene, simply run:
 ```
