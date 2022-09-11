@@ -32,7 +32,7 @@ cd go-surf
 
 ### Create environment
 
-The code is tested with Python 3.9 and PyTorch 1.11 with CUDA 11.3. GO-Surf requires [smooth_sampler](https://github.com/tymoteuszb/smooth-sampler). Also the following packages are required:
+The code is tested with Python 3.9 and PyTorch 1.11 with CUDA 11.3. GO-Surf requires [smooth_sampler](https://github.com/tymoteuszb/smooth-sampler), which is a drop-in replacement for PyTorch's grid sampler that support double back-propagation. Also the following packages are required:
 
 <details>
   <summary> Dependencies (click to expand) </summary>
@@ -69,7 +69,7 @@ python setup.py install
 ## 2. Dataset
 
 ### Synthetic Dataset
-We use the synthetic dataset from [NeuralRGB-D](https://github.com/dazinovic/neural-rgbd-surface-reconstruction) which contains 10 synthetic sequences with GT meshes and camera poses. You can download it from [here](https://www.dropbox.com/s/qehzn4divmtzgp2/neural_rgbd_data.zip?dl=0) (9.5 GB). You can also find the original link in NeuralRGB-D's Github repo from [here](https://github.com/dazinovic/neural-rgbd-surface-reconstruction#dataset).
+We use the synthetic dataset from [NeuralRGB-D](https://github.com/dazinovic/neural-rgbd-surface-reconstruction) which contains 10 synthetic sequences with GT meshes and camera poses. You can download it from [here](https://liveuclac-my.sharepoint.com/:u:/g/personal/ucabjw4_ucl_ac_uk/EXWvaJvM1DxBhPzH0agTARAB-G1_yKnUMFggr09o2F9Wxw?e=28o2Ki) (8.8 GB). You can also find the original link in NeuralRGB-D's Github repo from [here](https://github.com/dazinovic/neural-rgbd-surface-reconstruction#dataset).
 
 The data of each scene is organised as follows:
 ```
