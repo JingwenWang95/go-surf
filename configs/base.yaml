@@ -1,5 +1,5 @@
 dataset_type: "rgbd"
-datasets_dir: "/media/jingwen/Data/neural_rgbd_data"
+datasets_dir: "/media/jingwen/Data1/neural_rgbd_data"
 lr:
     decoder: 0.001
     features: 0.01
@@ -16,7 +16,7 @@ decoder:
         W: 32
         D: 2
         skips: []
-        n_freq: 0
+        n_freq: -1
         weight_norm: false
         concat_qp: false
     radiance:
@@ -26,7 +26,7 @@ decoder:
         use_view_dirs: true # concatenate viewing direction
         use_normals: false # concatenate surface normal
         use_dot_prod: false # concatenate dot product between viewing dir and surface normal
-        n_freq: 0
+        n_freq: -1
         weight_norm: false
         concat_qp: false
 near: 0.1
@@ -45,4 +45,4 @@ n_importance: 36
 use_view_dirs: true
 batch_size: 6144
 trainskip: 1
-reconstruct_upsample: 4
+reconstruct_upsample: 3

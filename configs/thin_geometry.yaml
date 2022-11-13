@@ -4,4 +4,4 @@ lr:
     inv_s: 0.001
     poses: 0.0001
 voxel_sizes: [0.02, 0.04, 0.16, 0.64]
-reconstruct_upsample: 3
+reconstruct_upsample: 4

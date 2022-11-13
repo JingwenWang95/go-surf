@@ -108,19 +108,24 @@ We also tested our code on real-world sequences from ScanNet. You can download t
 Don't forget to change the `datasets_dir` in the config files to the dataset root directory after downloading the datasets!
 
 ## 3. Run
-
+### Training
 You can start training by running:
 ```
 python train.py --scene grey_white_room  --exp_name test
 ```
 Note that `scene` must correspond to the config files defined under `configs/`. For the list of scenes you can refer to [here](https://github.com/JingwenWang95/go-surf/blob/master/dataio/get_scene_bounds.py#L4). After training, the log files and checkpoints will be saved under `logs/${scene}/${exp_name}`
-
+### Mesh Extraction
 To extract the mesh of trained scene, simply run:
 ```
 python reconstruct.py --scene grey_white_room  --exp_name test
 ```
-The extracted mesh will be saved as `logs/${scene}/${exp_name}/mesh/${scene}.ply`
-
+The extracted mesh will be saved under the directory`logs/${scene}/${exp_name}/mesh/`.
+If you want colored mesh, simply add the option `--color_mesh`:
+```
+python reconstruct.py --scene scene0000_00  --exp_name test_color --color_mesh
+```
+You may want to switch off the `use_view_dirs` in color decoder if you want a good-looking colored mesh.
+### Evaluation
 For evaluation, run:
 ```
 python eval_mesh.py --scene grey_white_room  --exp_name test --n_iters 10000 --remove_missing_depth

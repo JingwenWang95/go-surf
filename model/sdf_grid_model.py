@@ -7,7 +7,6 @@ from model.multi_grid import MultiGrid
 from model.utils import compute_world_dims, coordinates
 
 
-# TODO: Should we put feature volume inside SDFGridModel?
 class SDFGridModel(torch.nn.Module):
     def __init__(self,
                  config,
