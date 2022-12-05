@@ -11,6 +11,11 @@
 
 This repository contains the code for GO-Surf, a direct feature grid optimization method for accurate and fast surface reconstruction from RGB-D sequences.
 
+# Updates
+- [x] 📣 Main training code and data [2022-09-11].
+- [x] 📣 Extracting colored mesh [2022-11-13].
+- [ ] 📣 Sequential Mapping.
+
 # Method Overview
 
 GO-Surf uses multi-level feature grids and two shallow MLP decoders. Given a sample point along a ray, each grid is queried via tri-linear interpolation. Multi-level features are concatenated and decoded into SDF, and used to compute the sample weight. Color is decoded separately from the finest grid. Loss terms are applied to SDF values, and rendered depth and color. The gradient of the SDF is calculated at each query point and used for Eikonal and smoothness regularization.
