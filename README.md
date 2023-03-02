@@ -152,5 +152,7 @@ If you use this code in your research, please consider citing:
 ```
 
 # Acknowledgement
+This work was supported from a sponsored research award by Cisco Research and by the UCL Centre for Doctoral Training in Foundational AI under UKRI grant number EP/S021566/1.
+
 Some code snippets are borrowed from [neurecon](https://github.com/ventusff/neurecon) and [NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch). The Marching Cubes implementation was from [NeuralRGB-D](https://github.com/dazinovic/neural-rgbd-surface-reconstruction). Special thanks to [Dejan Azinović](https://niessnerlab.org/members/dejan_azinovic/profile.html) for providing additional details on culling and evaluation scripts!
 
